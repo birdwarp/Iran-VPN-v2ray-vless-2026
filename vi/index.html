@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/static/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+
+    <script src="/static/js/jquery.slim.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min_1.css">
+    <link rel="stylesheet" href="/static/css/materialdesignicons.min.css">
+
+    <title>BirdWarp Network - Quyền riêng tư tối đa & Truy cập không giới hạn</title>
+
+    <script>
+        (function() {
+            var manualLang = localStorage.getItem('userLang');
+            var browserLang = navigator.language || navigator.userLanguage;
+            var currentPath = window.location.pathname;
+
+            if (!manualLang) {
+                var lang = browserLang.toLowerCase();
+                if (lang.startsWith('ru') && !currentPath.startsWith('/ru')) {
+                    window.location.replace('/ru/index.html');
+                } else if (lang.startsWith('fa') && !currentPath.startsWith('/fa')) {
+                    window.location.replace('/fa/index.html');
+                } else if (lang.startsWith('vi') && !currentPath.startsWith('/vi')) {
+                    window.location.replace('/vi/index.html');
+                } else if (lang.startsWith('my') && !currentPath.startsWith('/my')) {
+                    window.location.replace('/my/index.html');
+                }
+            }
+        })();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('userLang', lang);
+            if (lang === 'ru') {
+                window.location.href = '/ru/index.html';
+            } else if (lang === 'fa') {
+                window.location.href = '/fa/index.html';
+            } else if (lang === 'vi') {
+                window.location.href = '/vi/index.html';
+            } else if (lang === 'my') {
+                window.location.href = '/my/index.html';
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="/vi/index.html">
+                <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
+                <h2 class="logo-light" style="color:#dee2e6;font-weight: 400;"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
+                    <li class="nav-item"><a href="/vi/index.html#home" class="nav-link active">Trang chủ</a></li>
+                    <li class="nav-item"><a href="/vi/index.html#services" class="nav-link">Dịch vụ</a></li>
+                    <li class="nav-item"><a href="/vi/index.html#features" class="nav-link">Quyền riêng tư</a></li>
+                    <li class="nav-item"><a href="/vi/index.html#pricing" class="nav-link">Bảng giá</a></li>
+                    <li class="nav-item client">
+                        <a href="#" class="nav-link">Ứng dụng</a>
+                        <ol class="title">
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.github.v2raygg">Android</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/2dust/v2rayN/releases/download/7.21.0/v2rayN-windows-64-desktop.zip">Windows</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/2dust/v2rayN/releases/download/7.21.0/v2rayN-macos-arm64.dmg">MacOS</a>
+                            </li>
+                            <li>
+                                <a href="https://apps.apple.com/us/app/shadowrocket/id932747118">iPhone</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <a href="https://panel.birdwarp.com/#/login" class="btn btn-sm rounded-pill nav-btn ms-lg-3"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+
+                <div class="nav-item dropdown ms-lg-3 mt-3 mt-lg-0">
+                    <button class="btn btn-sm rounded-pill nav-btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 80px;">
+                        <i class="fas fa-language"></i> VI
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('en')">English</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('ru')">Русский (RU)</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('fa')">فارسی (FA)</a></li>
+                        <li><a class="dropdown-item active" href="javascript:void(0)" onclick="switchLanguage('vi')">Tiếng Việt (VI)</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('my')">မြန်မာ (MY)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-1 bg-center bg-primary position-relative"
+        style="background-image: url(/static/images/hero-g-bg.png);" id="home">
+        <div class="container">
+            <div class="row align-items-center hero-content">
+                <div class="col-lg-5">
+                    <h1 class="text-white display-4 font-weight-bold mb-4 hero-1-title">Truy cập không giới hạn. Quyền riêng tư tuyệt đối.</h1>
+                    <p class="text-white-70 mb-4">Các giao thức chống kiểm duyệt thế hệ mới được thiết kế để vượt qua các tường lửa nghiêm ngặt nhất. Chúng tôi bảo vệ quyền riêng tư của bạn bằng mã hóa cấp quân sự và chính sách không lưu nhật ký (no-logs) nghiêm ngặt. Bảo vệ dấu chân kỹ thuật số của bạn và thanh toán ẩn danh 100% bằng USDT.</p>
+                    <a class="btn btn-lg btn-light rounded-pill mb-2" href="https://panel.birdwarp.com/#/register"><strong>Bắt đầu ẩn danh ngay</strong>
+                        <i class="fa fa-shield-alt" aria-hidden="true"></i></a>
+                </div>
+
+                <div id="carouselExampleIndicators" class="col-lg-6 col-sm-12 mx-auto ms-lg-auto me-lg-0 carousel slide"
+                    data-ride="carousel">
+                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper"
+                            style="transform: translate3d(-2544px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                                data-swiper-slide-index="2" style="width: 636px;"><img
+                                    src="/static/picture/banner-hulu-3.png" class="d-block w-100"></div>
+                            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0"
+                                style="width: 636px;"><img src="/static/picture/banner-hbo-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 636px;"><img
+                                    src="/static/picture/banner-netflix-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                                data-swiper-slide-index="2" style="width: 636px;"><img
+                                    src="/static/picture/banner-hulu-3.png" class="d-block w-100"></div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                data-swiper-slide-index="0" style="width: 636px;"><img
+                                    src="/static/picture/banner-hbo-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bottom-shape">
+            <img src="/static/picture/hero-1-bottom-shape.png" alt="" class="img-fluid d-block mx-auto">
+        </div>
+    </section>
+    <section class="section" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold">Công cụ tối thượng cho Tự do & Bảo mật</h2>
+                    <p class="text-muted">Được thiết kế dành riêng để chống lại kiểm duyệt mạng. Truy cập tốc độ cao vào web mở, mọi lúc, mọi nơi mà hoàn toàn không để lại dấu vết.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-box text-primary">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22">Chống kiểm duyệt</h4>
+                            <p class="text-muted mb-0">Được thiết kế để vượt qua Kiểm tra gói tin sâu (DPI) và các tường lửa nghiêm ngặt. Lấy lại quyền truy cập internet mở của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-layers text-primary">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22 text-white-90">Đa nền tảng</h4>
+                            <p class="text-white mb-0 text-white-90">Bảo mật toàn bộ cuộc sống kỹ thuật số của bạn. Tương thích hoàn toàn với macOS, iOS, Android, Linux và Windows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-shield text-primary">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22">Thanh toán USDT ẩn danh</h4>
+                            <p class="text-muted mb-0">Bảo vệ quyền riêng tư tài chính của bạn. Chúng tôi tự hào chấp nhận USDT cho các gói đăng ký hoàn toàn an toàn và không thể truy xuất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-light" id="features">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                    <span class="badge badge-pill badge-primary mb-4">CHÍNH SÁCH KHÔNG LƯU NHẬT KÝ</span>
+                    <h2 class="mb-4">Dữ liệu của bạn là của bạn. Chúng tôi không lưu bất kỳ nhật ký nào.</h2>
+                    <p class="text-muted mb-5">Quyền riêng tư không phải là một tính năng; đó là quyền cơ bản. BirdWarp hoạt động nghiêm ngặt theo chính sách không lưu nhật ký. Chúng tôi không theo dõi, thu thập hoặc chia sẻ lịch sử duyệt web, dữ liệu lưu lượng truy cập hoặc truy vấn DNS của bạn. Danh tính của bạn luôn ẩn danh 100%.</p>
+                    <a href="https://panel.birdwarp.com/#/register" class="btn btn-primary">Bảo mật kết nối của bạn <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right icon-xs ms-2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></a>
+                </div>
+                <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                    <div class="position-relative">
+                        <div class="ms-5 features-img">
+                            <img src="/static/picture/top-hbo-movies.jpg" alt="Privacy Protection" class="img-fluid d-block mx-auto">
+                        </div>
+                        <img src="/static/picture/dot-img.png" alt="" class="dot-img-left">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center section pb-0">
+                <div class="col-md-6">
+                    <div class="position-relative mb-md-0 mb-5">
+                        <div class="me-5 features-img">
+                            <img src="/static/picture/halloween-movies.jpg" alt="Censorship Resistant"
+                                class="img-fluid d-block mx-auto rounded shadow">
+                        </div>
+                        <img src="/static/picture/dot-img.png" alt="" class="dot-img-right">
+                    </div>
+                </div>
+                <div class="col-md-5 ms-md-auto">
+                    <span class="badge badge-pill badge-primary mb-4">CHỐNG KIỂM DUYỆT</span>
+                    <h2 class="mb-4">Vượt qua tường lửa. Bảo vệ dấu chân kỹ thuật số của bạn.</h2>
+                    <p class="text-muted mb-5">BirdWarp tạo đường hầm lưu lượng truy cập của bạn một cách an toàn qua các rơ-le được mã hóa, che giấu địa chỉ IP thực của bạn và vô hiệu hóa Kiểm tra gói tin sâu (DPI). Kết hợp với thanh toán USDT phi tập trung, sự hiện diện trực tuyến của bạn gần như tàng hình đối với các ISP và quản trị viên mạng.</p>
+                    <a href="https://panel.birdwarp.com/#/register" class="btn btn-primary">Thanh toán bằng tiền điện tử <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right icon-xs ms-2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-gradient-primary">
+        <div class="bg-overlay-img" style="background-image: url(/static/images/demos.png);"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h1 class="text-white mb-4">Hỗ trợ kỹ thuật 24/7</h1>
+                        <p class="text-white mb-5 font-size-16">
+                            Bạn đang gặp sự cố chặn kết nối hoặc cần trợ giúp thiết lập ví tiền điện tử cho thanh toán USDT? Hãy liên hệ với nhóm tư vấn bảo mật của chúng tôi để được hỗ trợ ngay lập tức và kín đáo.</p>
+                        <a href="https://panel.birdwarp.com"
+                            class="btn btn-lg btn-light fw-bold">Liên hệ với chúng tôi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold">Quyền riêng tư cao cấp. Bảng giá minh bạch.</h2>
+                    <p class="text-muted">
+                        Đầu tư vào tự do kỹ thuật số của bạn. Chúng tôi chấp nhận USDT trên mạng TRC20/ERC20 để đảm bảo rằng gói đăng ký của bạn không thể bị truy xuất về danh tính thực.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mb-4 pricing-tab">
+                        <ul class="nav nav-pills rounded-pill justify-content-center d-inline-block shadow-sm"
+                            id="pricingpills-tab" role="tablist">
+                            <li class="nav-item d-inline-block">
+                                <a class="nav-link rounded-pill active" id="pills-monthly-tab" data-bs-toggle="pill"
+                                    href="#pills-monthly" role="tab" aria-controls="pills-monthly"
+                                    aria-selected="true">Hàng tháng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="pricingpills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-monthly" role="tabpanel"
+                            aria-labelledby="pills-monthly-tab">
+                            <div class="row mt-5">
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Gói Cơ bản 100GB
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$1.80</div>
+                                                <div>/ tháng</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Truyền dữ liệu 100GB</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">3 Thiết bị đồng thời</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Cụm máy chủ toàn cầu tiêu chuẩn</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Hỗ trợ USDT</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/1">Đăng ký bằng tiền điện tử</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Gói Tiêu chuẩn 300GB
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$4.00</div>
+                                                <div>/ tháng</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Truyền dữ liệu 300GB</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">5 Thiết bị đồng thời</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Cụm máy chủ vượt DPI</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Hỗ trợ USDT</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/2">Đăng ký bằng tiền điện tử</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Gói Cao cấp 800GB
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$10.00</div>
+                                                <div>/ tháng</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Truyền dữ liệu 800GB</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">9 Thiết bị đồng thời</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Đường truyền Intranet độc quyền</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Hỗ trợ USDT</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/3">Đăng ký bằng tiền điện tử</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="bg-overlay-img" style="background-image: url(/static/images/footer-bg.png);">
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <a href="/vi/index.html">
+                            <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp</h2>
+                        </a>
+                        <p class="text-white-50 mt-4 mb-1" style="font-size: 1rem;line-height: 1.6rem;">
+                            Tận tâm cung cấp các dịch vụ proxy mạng được mã hóa cao, chống kiểm duyệt. Bảo mật dữ liệu của bạn và thanh toán ẩn danh.</p>
+                        <p style="font-size: 0.8rem;line-height: 1.2rem;">Chúng tôi tự hào đấu tranh cho quyền riêng tư và internet mở. Đánh bại tường lửa, không để lại nhật ký và lấy lại tự do kỹ thuật số của bạn ngay hôm nay.</p>
+                        <p class="text-white-50 mb-0" style="font-size: 0.8rem!important;">
+                            Được hỗ trợ bởi
+                            <a href="/vi/index.html" data-bs-original-title="" title="">BirdWARP Network</a>
+                            ©
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-none d-sm-none d-md-none d-lg-block">
+                    <div class="row">
+                        <div class="col-lg-3 col-6"></div>
+                        <div class="col-lg-3 col-6"></div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3 text-end">Trang chủ</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/plan" class="footer-link">Cửa hàng</a></li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/node" class="footer-link">Danh sách máy chủ</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/invite" class="footer-link">Tiếp thị liên kết</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/profile" class="footer-link">Ví</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/plan" class="footer-link">Mã khuyến mãi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3 text-end">Hỗ trợ</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li class="text-end"><a
+                                            href="https://panel.birdwarp.com"
+                                            class="footer-link">Liên hệ</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/ticket" class="footer-link">Hệ thống hỗ trợ (Ticket)</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">Câu hỏi thường gặp</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">Hướng dẫn Crypto</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">Hướng dẫn sử dụng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="/static/js/5c95f998e36645deaae79de936803599.js"></script>
+    <script src="/static/js/app.js"></script>
+
+    <script src="/static/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+        })
+</body>
+</html>
